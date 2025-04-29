@@ -171,6 +171,7 @@ label {
 /* line 115, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/theme-default.scss */
 h3 {
   font-size: 24px;
+  font-weight: 600;
 }
 
 /* line 119, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/theme-default.scss */
@@ -1325,7 +1326,7 @@ h3 {
 .weeding_countdown_area .countdown_area .countdown_wrap .single_countdown h3 {
   font-size: 60px;
   font-family: "Petit Formal Script", cursive;
-  font-weight: 400;
+  font-weight: 600;
   color: #b8be72;
   margin-bottom: 17px;
 }
@@ -1388,8 +1389,8 @@ h3 {
 
 /* line 27, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_program.scss */
 .program_details_area .single_program .program_inner h3 {
-  font-family: "Muli", sans-serif;
-  font-weight: 400;
+  font-family: "Petit Formal Script", cursive;
+  font-weight: 600;
   font-size: 24px;
   line-height: 30px;
   color: #b8be72;
@@ -1487,6 +1488,7 @@ h3 {
   text-align: center;
   font-size: 36px;
   color: #b8be72;
+  font-weight: 600;
 }
 
 @media (max-width: 767px) {
@@ -1692,6 +1694,7 @@ h3 {
 .love_story_area .single_lover_story h3 {
   font-size: 36px;
   color: #b8be72;
+  font-weight: 600;
 }
 
 @media (max-width: 767px) {
@@ -1770,7 +1773,7 @@ h3 {
 .love_story_area .weding_time_line .single_time_line h3 {
   font-size: 24px;
   color: #b8be72;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 /* line 98, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_story.scss */
