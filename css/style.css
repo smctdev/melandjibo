@@ -593,17 +593,18 @@ h3 {
   right: 0;
   margin: auto;
   top: 0px;
+  font-family: "Muli", sans-serif;
 }
 
 /* line 28, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_slick-nav.scss */
 .slicknav_menu .slicknav_nav a:hover {
   background: transparent;
-  color: #F2C64D;
+  color: #b8be72;
 }
 
 /* line 32, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_slick-nav.scss */
 .slicknav_menu .slicknav_nav a.active {
-  color: #F2C64D;
+  color: #b8be72;
 }
 
 @media (max-width: 767px) {
@@ -693,7 +694,7 @@ h3 {
 
 /* line 106, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_slick-nav.scss */
 .slicknav_icon-bar {
-  background: #000 !important;
+  background: white !important;
 }
 
 /* line 1, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_header.scss */
@@ -703,7 +704,7 @@ h3 {
   top: 0;
   background: transparent;
   z-index: 999;
-  background: #fff;
+  background: #b8be72;
 }
 
 /* line 9, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_header.scss */
@@ -768,10 +769,10 @@ h3 {
 
 /* line 46, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li a {
-  color: #727272;
+  color: white;
   font-size: 15px;
   text-transform: capitalize;
-  font-weight: 400;
+  font-weight: 600;
   display: inline-block;
   padding: 38px 23px 38px 23px;
   font-family: "Muli", sans-serif;
@@ -913,7 +914,7 @@ h3 {
   transition: transform 500ms ease, background 500ms ease;
   -webkit-transition: transform 500ms ease, background 500ms ease;
   box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
-  background: #fff;
+  background: #b8be72;
 }
 
 @media (max-width: 767px) {
