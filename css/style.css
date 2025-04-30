@@ -5362,12 +5362,14 @@ h6 {
 
 .gift-modal-content {
   background-color: #fff;
-  margin: 10% auto;
   padding: 10px;
   border-radius: 8px;
   width: 90%;
   max-width: 500px;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the modal */
   text-align: center;
 }
 
@@ -5384,6 +5386,7 @@ h6 {
 .gift-close:hover {
   color: #000;
 }
+
 
 .schedule {
   margin-top: var(--spacing-12);
