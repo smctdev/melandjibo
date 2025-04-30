@@ -367,7 +367,20 @@
         </div>
     </div>
     <!-- / attend_area -->
-
+  <!-- Floating Gift Icon -->
+  <a href="javascript:void(0);" class="fixed-gift-icon" onclick="openGiftModal()" title="Send Your Gifts Here!">
+    <img src="img/giftbox.png" alt="Gift Icon" width="50" height="50">
+  </a>
+  
+  
+  <!-- Modal -->
+  <div id="giftModal" class="gift-modal">
+    <div class="gift-modal-content">
+      <span class="gift-close" onclick="closeGiftModal()">&times;</span>
+      <img src="img/banner/banner.jpg" alt="Gift Image" style="max-width: 100%; height: auto;">
+    </div>
+  </div>
+  
 
 <!-- ================ contact section start ================= -->
 <!-- <section class="location_area" id="contact">
@@ -487,6 +500,25 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&callback=initMap" async defer></script>
+
+<script>
+    function openGiftModal() {
+      document.getElementById('giftModal').style.display = 'block';
+    }
+  
+    function closeGiftModal() {
+      document.getElementById('giftModal').style.display = 'none';
+    }
+  
+    // Close modal if clicked outside content
+    window.onclick = function(event) {
+      const modal = document.getElementById('giftModal');
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+  
 
 
 
