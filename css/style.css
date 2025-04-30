@@ -394,7 +394,7 @@ h3 {
 
 /* line 46, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_btn.scss */
 .boxed_btn3 {
-  background: #b8be72;
+  background: #9CAF88;
   padding: 9px 26px;
   margin-bottom: 0;
   font-size: 20px;
@@ -500,7 +500,7 @@ h3 {
   font-size: 18px;
   font-weight: 600;
   font-family: "Muli", sans-serif;
-  color: #b8be72;
+  color: #9CAF88;
   display: block;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -599,12 +599,12 @@ h3 {
 /* line 28, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_slick-nav.scss */
 .slicknav_menu .slicknav_nav a:hover {
   background: transparent;
-  color: #b8be72;
+  color: #9CAF88;
 }
 
 /* line 32, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_slick-nav.scss */
 .slicknav_menu .slicknav_nav a.active {
-  color: #b8be72;
+  color: #9CAF88;
 }
 
 @media (max-width: 767px) {
@@ -704,7 +704,7 @@ h3 {
   top: 0;
   background: transparent;
   z-index: 999;
-  background: #b8be72;
+  background: #9CAF88;
 }
 
 /* line 9, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_header.scss */
@@ -914,7 +914,7 @@ h3 {
   transition: transform 500ms ease, background 500ms ease;
   -webkit-transition: transform 500ms ease, background 500ms ease;
   box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
-  background: #b8be72;
+  background: #9CAF88;
 }
 
 @media (max-width: 767px) {
@@ -1057,7 +1057,7 @@ h3 {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
-  background: #b8be72;
+  background: #9CAF88;
   padding: 126px 55px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1198,7 +1198,7 @@ h3 {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  border: 1px solid #b8be72;
+  border: 1px solid #9CAF88;
   top: -30px;
   left: -20px;
   z-index: -3;
@@ -1328,7 +1328,7 @@ h3 {
   font-size: 60px;
   font-family: "Petit Formal Script", cursive;
   font-weight: 600;
-  color: #b8be72;
+  color: #9CAF88;
   margin-bottom: 17px;
 }
 
@@ -1396,7 +1396,7 @@ h3 {
   font-weight: 600;
   font-size: 24px;
   line-height: 30px;
-  color: #b8be72;
+  color: #9CAF88;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -1506,7 +1506,7 @@ h3 {
 .attending_area .main_attending_area .popup_box h3 {
   text-align: center;
   font-size: 36px;
-  color: #b8be72;
+  color: #9CAF88;
   font-weight: 600;
 }
 
@@ -1718,7 +1718,7 @@ h3 {
 
 .love_story_area .single_lover_story h3 {
   font-size: 36px;
-  color: #b8be72;
+  color: #9CAF88;
   font-weight: 600;
 }
 
@@ -1749,7 +1749,7 @@ h3 {
   height: 35px;
   border-radius: 50%;
   background: #F9F3EF;
-  color: #b8be72;
+  color: #9CAF88;
   display: inline-block;
   text-align: center;
   line-height: 35px;
@@ -1757,7 +1757,7 @@ h3 {
 }
 
 .love_story_area .single_lover_story .social_links ul li a:hover {
-  background: #b8be72;
+  background: #9CAF88;
   color: #fff;
 }
 
@@ -1795,7 +1795,7 @@ h3 {
   position: absolute;
   height: 40px;
   width: 1px;
-  background: #b8be72;
+  background: #9CAF88;
   left: 50%;
   content: "";
   bottom: -10px;
@@ -1804,7 +1804,7 @@ h3 {
 
 .love_story_area .weding_time_line .single_time_line h3 {
   font-size: 24px;
-  color: #b8be72;
+  color: #9CAF88;
   font-weight: 600;
 }
 
@@ -1971,7 +1971,7 @@ h3 {
 .location_area .location_info .location_inner h3 {
   font-size: 36px;
   font-weight: 400;
-  color: #b8be72;
+  color: #9CAF88;
 }
 
 /* line 43, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_location.scss */
@@ -1986,7 +1986,7 @@ h3 {
 
 /* line 50, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_location.scss */
 .location_area .location_info .location_inner p span {
-  color: #b8be72;
+  color: #9CAF88;
 }
 
 @media (max-width: 767px) {
@@ -1998,7 +1998,7 @@ h3 {
 
 /* line 59, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_location.scss */
 .location_area .location_info .location_inner .address_info .single_address h4 {
-  color: #b8be72;
+  color: #9CAF88;
   font-size: 16px;
   font-family: "Muli", sans-serif;
   font-weight: 600;
@@ -5395,7 +5395,7 @@ h6 {
   text-align: center;
   margin-bottom: var(--spacing-8);
   font-family:  "Petit Formal Script", cursive;
-  color: #b8be72;
+  color: #9CAF88;
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -5444,7 +5444,7 @@ h6 {
 .schedule-content h4 {
   margin-bottom: var(--spacing-1);
   font-family: "Muli", sans-serif;
-  color:#b8be72;
+  color:#9CAF88;
 }
 
 .schedule-content p {
@@ -5512,12 +5512,12 @@ h6 {
 }
 
 .registry-intro  b{
-  color: #b8be72;
+  color: #9CAF88;
 }
 
 .registry-title {
   font-family: "Petit Formal Script", cursive;
-  color: #b8be72;
+  color: #9CAF88;
   font-size: 2rem; /* Adjust size as needed */
   margin-bottom: 15px;
 }
@@ -5532,12 +5532,12 @@ h6 {
 .divider-line {
   flex: 1;
   height: 1px;
-  background-color: #b8be72;
+  background-color: #9CAF88;
 }
 
 .divider-icon {
   font-family: "Petit Formal Script", cursive;
-  color: #b8be72;
+  color: #9CAF88;
   font-size: 2rem; /* Adjust size of heart icon */
   margin: 0 10px;
 }
