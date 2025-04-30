@@ -5472,6 +5472,80 @@ h6 {
   }
 }
 
+/* Registry Section */
+.registry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Centers all text */
+  padding: 20px 0;
+}
+
+.registry-intro {
+  max-width: 100%;
+  margin: 0 auto var(--spacing-8);
+  text-align: center;
+  font-family: "Muli", sans-serif;
+}
+
+.registry-title {
+  font-family: "Petit Formal Script", cursive;
+  color: #b8be72;
+  font-size: 2rem; /* Adjust size as needed */
+  margin-bottom: 15px;
+}
+
+.divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: #b8be72;
+}
+
+.divider-icon {
+  font-family: "Petit Formal Script", cursive;
+  color: #b8be72;
+  font-size: 2rem; /* Adjust size of heart icon */
+  margin: 0 10px;
+}
+
+.registry-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-8);
+  flex-wrap: wrap;
+}
+
+.registry-item {
+  text-align: center;
+  transition: transform 0.3s ease;
+  font-family: "Muli", sans-serif;
+}
+
+.registry-item:hover {
+  transform: translateY(-5px);
+}
+
+.registry-logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--spacing-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registry-icon {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 
 
 /*# sourceMappingURL=style.css.map */
