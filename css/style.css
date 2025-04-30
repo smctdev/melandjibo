@@ -5366,6 +5366,11 @@ h6 {
   text-align: center;
 }
 
+.gift-modal-content p{
+  font-family: "Muli", sans-serif;
+  font-weight: 600;
+}
+
 .gift-close {
   color: #aaa;
   position: absolute;
