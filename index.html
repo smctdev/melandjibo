@@ -754,7 +754,29 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     });
   });
 </script>
+<script>
+// Function to trigger fast lively shake effect
+function livelyShake() {
+  var giftIcon = document.querySelector('.fixed-gift-icon');
 
+  // Add lively shake effect
+  giftIcon.classList.add('shake-icon');
+
+  // Remove the shake effect after 0.6s (duration of the animation)
+  setTimeout(function() {
+    giftIcon.classList.remove('shake-icon');
+  }, 600); // Shorter duration to make it fast (600ms)
+}
+
+// Function to trigger random lively shakes at random intervals
+function triggerRandomShakes() {
+  setInterval(livelyShake, Math.random() * (5000 - 2000) + 2000); // Random interval between 2 and 5 seconds
+}
+
+// Start the random lively shake effect when the page loads
+window.onload = triggerRandomShakes;
+
+</script>
 </body>
 
 </html>

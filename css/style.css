@@ -5334,6 +5334,7 @@ h6 {
   font-size: 12px;
 }
 /* Gift Icon */
+/* Gift Icon */
 .fixed-gift-icon {
   position: fixed;
   bottom: 20px;
@@ -5343,14 +5344,32 @@ h6 {
   transition: transform 0.3s ease;
 }
 
+/* Adjust the size of the gift icon */
 .fixed-gift-icon img {
   width: 80px; /* Adjust the size if needed */
   height: 80px;
 }
 
+/* Hover effect - scales the icon */
 .fixed-gift-icon:hover {
   transform: scale(1.2);
 }
+
+/* Keyframe animation for fast lively shake effect */
+@keyframes lively-shake {
+  0% { transform: translateX(0) rotate(0deg); }
+  20% { transform: translateX(-12px) rotate(-12deg); }
+  40% { transform: translateX(12px) rotate(12deg); }
+  60% { transform: translateX(-12px) rotate(-12deg); }
+  80% { transform: translateX(12px) rotate(12deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+}
+
+/* Apply fast lively shake effect */
+.shake-icon {
+  animation: lively-shake 0.6s ease-in-out; /* Faster shake with shorter duration */
+}
+
 
 /* Modal Styles */
 .gift-modal {
