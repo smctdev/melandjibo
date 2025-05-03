@@ -78,7 +78,7 @@
                 <div class="text_inner">
                     <img src="img/banner/ornaments.png" alt="">
                     <h4>20 September 2025</h4>
-                    <h3>Melidita & Jibo <br>
+                    <h3>Melidita & Johannsen <br>
                         Wedding Ceremony</h3>
                 </div>
             </div>
@@ -100,7 +100,7 @@
                     <div class="section_title text-center">
                         <img src="img/banner/flowers.png" alt="">
                         <span>20. September. 2025</span>
-                        <h3>THE. WEDDING. Countdown</h3>
+                        <h3>COUNTDOWN TO FOREVER</h3>
                     </div>
                 </div>
             </div>
@@ -121,7 +121,7 @@
                 <div class="col-xl-12">
                     <div class="section_title text-center">
                         <img src="img/banner/flowers.png" alt="">
-                        <h3>Our. Love. Story</h3>
+                        <h3>Our Love Story</h3>
                     </div>
                 </div>
             </div>
@@ -216,7 +216,7 @@
                 <div class="col-xl-12">
                     <div class="section_title text-center">
                         <img src="img/banner/flowers.png" alt="">
-                        <h3>Gallery.  Photos</h3>
+                        <h3>Gallery  Photos</h3>
                     </div>
                 </div>
             </div>
@@ -299,7 +299,7 @@
                 <div class="col-xl-12">
                     <div class="section_title text-center">
                         <img src="img/banner/flowers.png" alt="">
-                        <h3>Program. Details</h3>
+                        <h3>Program Details</h3>
                     </div>
                 </div>
             </div>
@@ -348,6 +348,7 @@
                                     <img src="img/dress_code/woman2.png" alt="Style 2">
                                     <img src="img/dress_code/man1.png" alt="Style 3">
                                     <img src="img/dress_code/man2.jpg" alt="Style 4">
+                                    <img src="img/dress_code/dc1.png" alt="Style 4">
                                 </div>
                             </div>
                             <div class="program_ornament">
@@ -636,7 +637,123 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   
 
 
+  <script>
+    // Intersection Observer to detect when an element enters the viewport
+    document.addEventListener("DOMContentLoaded", () => {
+      const observerOptions = {
+        root: null, // null means the viewport
+        rootMargin: "0px",
+        threshold: 0.1 // When 10% of the element is visible
+      };
+  
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible"); // Add visible class when element is in the viewport
+            observer.unobserve(entry.target); // Stop observing the element after it has animated
+          }
+        });
+      }, observerOptions);
+  
+      // Target all the program cards
+      const programCards = document.querySelectorAll(".single_program");
+      programCards.forEach(card => observer.observe(card));
+    });
+  </script>
+  
+<script>document.addEventListener("DOMContentLoaded", function() {
+    const galleryItems = document.querySelectorAll('.single_gallery');
+    
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5 // When 50% of the item is in view
+    };
+  
+    const observerCallback = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Stop observing once animated
+        }
+      });
+    };
+  
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+  
+    galleryItems.forEach(item => {
+      observer.observe(item);
+    });
+  });
+  </script>
+   <script>
+    // Function to detect if an element is in the viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return rect.top <= window.innerHeight && rect.bottom >= 0;
+    }
 
+    // Function to add the "visible" class when element is in viewport
+    function checkScroll() {
+        const elements = document.querySelectorAll('.single_lover_story');
+        elements.forEach(element => {
+            if (isInViewport(element)) {
+                element.classList.add('visible');
+            }
+        });
+    }
+
+    // Initialize scroll detection
+    window.addEventListener('scroll', checkScroll);
+    document.addEventListener('DOMContentLoaded', () => {
+        checkScroll(); // Check immediately on load
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const items = document.querySelectorAll('.schedule-item');
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate');
+            } else {
+              entry.target.classList.remove('animate'); // Optional: re-animate when scrolling up
+            }
+          });
+        },
+        {
+          threshold: 0.1
+        }
+      );
+
+      items.forEach(item => observer.observe(item));
+    });
+  </script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const faders = document.querySelectorAll('.fade-up');
+
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  });
+</script>
 
 </body>
 

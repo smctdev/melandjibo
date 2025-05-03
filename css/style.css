@@ -1345,7 +1345,19 @@ h3 {
   font-weight: 400;
   text-transform: uppercase;
 }
+/* Keyframe for sliding animation */
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
+/* Styling for Program Details */
 .program_bg_1 {
   background-image: url(../img/program_details/1.png);
 }
@@ -1368,8 +1380,18 @@ h3 {
   background-position: center center;
   background-size: cover;
   margin-bottom: 30px;
+  opacity: 0; /* Keep elements hidden initially */
+  transform: translateY(30px); /* Start from below */
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
+/* When an element becomes visible in the viewport */
+.single_program.visible {
+  opacity: 1;
+  transform: translateY(0); /* Slide up */
+}
+
+/* Styling for Program Content */
 .program_inner {
   background: #fff;
   display: flex;
@@ -1421,6 +1443,16 @@ h3 {
   border-radius: 8px;
   border: 1px solid #ddd;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+  .single_program {
+    flex-direction: column;
+    padding: 10px;
+  }
+}
+
+
 
 
 /* line 1, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_attending.scss */
@@ -1668,216 +1700,171 @@ h3 {
   border: 0;
 }
 
-
-.love_story_area {
-  padding-top: 75px;
-  padding-bottom: 30px;
+   /* Container and Section */
+   .love_story_area {
+    padding-top: 75px;
+    padding-bottom: 30px;
 }
 
 @media (max-width: 767px) {
-  .love_story_area {
-    padding-top: 50px;
-    padding-bottom: 20px;
-  }
+    .love_story_area {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
 }
 
+/* Single Lover Story */
 .love_story_area .single_lover_story {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below */
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.love_story_area .single_lover_story.visible {
+    opacity: 1;
+    transform: translateY(0); /* Move to its original position */
 }
 
 .love_story_area .single_lover_story .story_thumb {
-  width: 247px;
-  height: 247px;
-  border-radius: 50%;
-  position: relative;
-  margin: auto;
+    width: 247px;
+    height: 247px;
+    border-radius: 50%;
+    position: relative;
+    margin: auto;
 }
 
 .love_story_area .single_lover_story .story_thumb img {
-  width: 100%;
+    width: 100%;
 }
 
 .love_story_area .single_lover_story .story_thumb:before {
-  position: absolute;
-  content: "";
-  left: 10px;
-  top: 10px;
-  bottom: 10px;
-  right: 10px;
-  border: 2px solid #fff;
-  border-radius: 50%;
+    position: absolute;
+    content: "";
+    left: 10px;
+    top: 10px;
+    bottom: 10px;
+    right: 10px;
+    border: 2px solid #fff;
+    border-radius: 50%;
 }
 
 .love_story_area .single_lover_story span {
-  font-size: 24px;
-  font-weight: 400;
-  margin-top: 3px;
-  display: block;
-  margin-bottom: 11px;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 3px;
+    display: block;
+    margin-bottom: 11px;
 }
 
 .love_story_area .single_lover_story h3 {
-  font-size: 36px;
-  color: #9CAF88;
-  font-weight: 600;
-}
-
-@media (max-width: 767px) {
-  .love_story_area .single_lover_story h3 {
-    font-size: 30px;
-  }
+    font-size: 36px;
+    color: #9CAF88;
+    font-weight: 600;
 }
 
 .love_story_area .single_lover_story p {
-  margin-top: 30px;
-  margin-bottom: 20px;
-  font-size: 16px;
-  line-height: 28px;
-  font-family: "Muli", sans-serif;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 28px;
+    font-family: "Muli", sans-serif;
 }
 
 .love_story_area .single_lover_story .social_links {
-  text-align: center;
+    text-align: center;
 }
 
 .love_story_area .single_lover_story .social_links ul li {
-  display: inline-block;
+    display: inline-block;
 }
 
 .love_story_area .single_lover_story .social_links ul li a {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  background: #F9F3EF;
-  color: #9CAF88;
-  display: inline-block;
-  text-align: center;
-  line-height: 35px;
-  margin: 0 3px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #F9F3EF;
+    color: #9CAF88;
+    display: inline-block;
+    text-align: center;
+    line-height: 35px;
+    margin: 0 3px;
 }
 
 .love_story_area .single_lover_story .social_links ul li a:hover {
-  background: #9CAF88;
-  color: #fff;
+    background: #9CAF88;
+    color: #fff;
 }
 
-/* ====== Weding Timeline Section (Updated for Scroll) ====== */
+/* Wedding Timeline (no animation) */
 .love_story_area .weding_time_line {
-  background: #FFFAF2;
-  padding: 30px;
-  margin-bottom: 30px;
-  max-height: 700px; /* adjust height as needed */
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding-right: 15px;
-}
-
-.love_story_area .weding_time_line::-webkit-scrollbar {
-  width: 6px;
-}
-
-.love_story_area .weding_time_line::-webkit-scrollbar-thumb {
-  background-color: #ccc;
-  border-radius: 3px;
-}
-
-.love_story_area .weding_time_line::-webkit-scrollbar-track {
-  background-color: transparent;
+    background: #FFFAF2;
+    padding: 30px;
+    margin-bottom: 30px;
+    max-height: 700px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 15px;
 }
 
 .love_story_area .weding_time_line .single_time_line {
-  padding-bottom: 48px;
-  padding-top: 45px;
-  position: relative;
-}
-
-.love_story_area .weding_time_line .single_time_line::before {
-  position: absolute;
-  height: 40px;
-  width: 1px;
-  background: #9CAF88;
-  left: 50%;
-  content: "";
-  bottom: -10px;
-  opacity: .2;
+    padding-bottom: 48px;
+    padding-top: 45px;
 }
 
 .love_story_area .weding_time_line .single_time_line h3 {
-  font-size: 24px;
-  color: #9CAF88;
-  font-weight: 600;
+    font-size: 24px;
+    color: #9CAF88;
+    font-weight: 600;
 }
 
 .love_story_area .weding_time_line .single_time_line p {
-  font-size: 16px;
-  line-height: 28px;
-  font-family: "Muli", sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    font-family: "Muli", sans-serif;
 }
 
-.love_story_area .weding_time_line .single_time_line:nth-child(4)::before {
-  display: none;
-}
-
-
-/* line 37, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
+/* Gallery Image Backgrounds */
 .gallery_imag_1 {
   background-image: url(../img/gallery/1.jpg);
 }
-
-/* line 40, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_2 {
   background-image: url(../img/gallery/2.jpg);
 }
-
-/* line 43, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_3 {
   background-image: url(../img/gallery/3.jpg);
 }
-
-/* line 46, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_4 {
   background-image: url(../img/gallery/4.jpg);
 }
-
-/* line 49, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_5 {
   background-image: url(../img/gallery/5.jpg);
 }
-
-/* line 52, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_6 {
   background-image: url(../img/gallery/10.jpeg);
 }
-
-/* line 55, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_7 {
   background-image: url(../img/gallery/7.jpeg);
 }
-
-/* line 58, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_8 {
   background-image: url(../img/gallery/8.jpeg);
 }
-
-/* line 61, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
 .gallery_imag_9 {
   background-image: url(../img/gallery/9.jpeg);
 }
 
-/* line 65, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
+/* Main Gallery Area */
 .gallery_area {
   padding: 0 50px;
   padding-top: 90px;
 }
-
 @media (max-width: 767px) {
-  /* line 65, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
   .gallery_area {
     padding: 0;
   }
 }
 
-/* line 71, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
+/* Individual Gallery Item */
 .gallery_area .single_gallery {
   height: 410px;
   background-size: cover;
@@ -1885,15 +1872,24 @@ h3 {
   background-position: center center;
   overflow: hidden;
   position: relative;
+
+  /* Sage Green Border */
+  border: 4px solid #9CAF88;
+  border-radius: 8px;
+  box-sizing: border-box;
+
+  opacity: 0; /* Hidden by default */
+  transform: translateY(30px); /* Positioned below */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* line 80, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
+/* Grid padding */
 .gallery_area .grid-item {
   overflow: hidden;
   padding: 4px !important;
 }
 
-/* line 84, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_gallery.scss */
+/* Make the anchor fill the full gallery box */
 .gallery_area a {
   position: absolute;
   left: 0;
@@ -1901,6 +1897,21 @@ h3 {
   width: 100%;
   height: 100%;
 }
+
+/* Animation for visible state */
+.single_gallery.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile image resizing */
+@media (max-width: 767px) {
+  .gallery_area .single_gallery {
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+}
+
 
 /* line 1, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_location.scss */
 .location_area {
@@ -5387,17 +5398,17 @@ h6 {
 }
 
 
-.schedule {
+ /* Base Styles */
+ .schedule {
   margin-top: var(--spacing-12);
 }
 
 .schedule h3 {
   text-align: center;
-  margin-bottom: var(--spacing-8);
-  font-family:  "Petit Formal Script", cursive;
+  margin-bottom: 10px;
+  font-family: "Petit Formal Script", cursive;
   color: #9CAF88;
   font-weight: 600;
-  margin-bottom: 10px;
 }
 
 .timeline-schedule {
@@ -5411,6 +5422,13 @@ h6 {
   margin-bottom: var(--spacing-6);
   position: relative;
   padding-left: var(--spacing-6);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.schedule-item.animate {
+  animation: fadeUp 0.6s ease forwards;
 }
 
 .schedule-item:before {
@@ -5444,7 +5462,7 @@ h6 {
 .schedule-content h4 {
   margin-bottom: var(--spacing-1);
   font-family: "Muli", sans-serif;
-  color:#9CAF88;
+  color: #9CAF88;
 }
 
 .schedule-content p {
@@ -5452,11 +5470,24 @@ h6 {
   font-size: var(--font-size-sm);
   font-family: "Muli", sans-serif;
 }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
   .schedule-item {
     flex-direction: column;
     gap: var(--spacing-2);
-    padding-left: var(--spacing-4); /* Less left padding for mobile */
+    padding-left: var(--spacing-4);
   }
 
   .schedule-item:before {
@@ -5464,7 +5495,7 @@ h6 {
   }
 
   .schedule-item:after {
-    left: -2px; /* Adjust for smaller space */
+    left: -2px;
     top: 4px;
   }
 
@@ -5482,7 +5513,7 @@ h6 {
   }
 
   .timeline-schedule {
-    padding: 0 16px; /* Add padding for small screens */
+    padding: 0 16px;
   }
 
   .schedule h3 {
